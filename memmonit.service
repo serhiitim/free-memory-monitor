@@ -1,0 +1,8 @@
+[Unit]
+Description=Memory Monitor for Flussonic
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/memmonit.sh
+User=root
