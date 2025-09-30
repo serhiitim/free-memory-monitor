@@ -1,5 +1,10 @@
-copy memmonit.service (timer) > /etc/systemd/system/
-copy memmonit.sh > /usr/bin/ ; chmod +x /usr/bin/memmonit.sh
+# Copy service and timer file to work directory
+cp memmonit.service /etc/systemd/system/
+cp memmonit.timer /etc/systemd/system/
+
+# Copy script to work directory and make him executible
+cp memmonit.sh /usr/bin/ 
+chmod +x /usr/bin/memmonit.sh
 
 # Start timer
 systemctl start memmonit.timer
