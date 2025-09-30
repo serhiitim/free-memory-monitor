@@ -1,3 +1,9 @@
+# Configuration
+RAM_THRESHOLD=80
+LOG_FILE="/var/log/flussonic_ram_monitor.log"
+PROCESS_NAME="flussonic"
+SERVICE_NAME="flussonic"  #systemd service name
+
 # Copy service and timer file to work directory
 cp memmonit.service /etc/systemd/system/
 cp memmonit.timer /etc/systemd/system/
