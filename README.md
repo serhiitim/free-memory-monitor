@@ -6,6 +6,10 @@ cp memmonit.timer /etc/systemd/system/
 cp memmonit.sh /usr/bin/ 
 chmod +x /usr/bin/memmonit.sh
 
+# systemctl daemon-reload
+# systemctl enable memmonit
+# service memmonit status
+
 # Start timer
 systemctl start memmonit.timer
 # Check timer status
